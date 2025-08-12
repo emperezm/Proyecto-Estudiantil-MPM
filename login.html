@@ -26,11 +26,78 @@
       height: 100vh;
     }
 
+    /* Panel izquierdo con imagen y texto */
     .left {
       flex: 1;
-      background-color: #f1f1f1;
+      background: url('img/uni.jpg') no-repeat center center/cover;
+      position: relative;
+      color: white;
+      padding: 40px;
+      display: flex;
+      align-items: center;
     }
 
+    .overlay-content {
+      max-width: 500px;
+    }
+
+    .overlay-content img.logo {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .overlay-content h4 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .overlay-content .subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+
+    .overlay-content h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .overlay-content .description {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+
+    .overlay-content ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .overlay-content ul li {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .overlay-content ul li::before {
+      content: "✅";
+      margin-right: 5px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .stats strong {
+      font-size: 18px;
+      display: block;
+    }
+
+    /* Panel derecho */
     .right {
       flex: 1;
       background-color: #e6f0ff;
@@ -191,7 +258,26 @@
 <body>
   <div class="container">
     <div class="left">
-      <!-- Espacio reservado para futura integración -->
+      <div class="overlay-content">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+        <h4>University MPM</h4>
+        <p class="subtitle">Plataforma de Gestión Educativa</p>
+        <h2>Gestiona tu institución de forma inteligente</h2>
+        <p class="description">
+          Administra estudiantes, profesores, calificaciones y asistencia desde un solo lugar.
+        </p>
+        <ul>
+          <li>Gestión completa de usuarios</li>
+          <li>Control de calificaciones</li>
+          <li>Asistencia en tiempo real</li>
+          <li>Comunicación integrada</li>
+        </ul>
+        <div class="stats">
+          <div><strong>1,200+</strong> Estudiantes</div>
+          <div><strong>50+</strong> Cursos</div>
+          <div><strong>98%</strong> Satisfacción</div>
+        </div>
+      </div>
     </div>
 
     <div class="right">
